@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import Loading from '../../Shared/Loading/Loading';
 
 const BookingModal = ({ bikes, setBikes }) => {
     const { user } = useContext(AuthContext)
@@ -37,12 +38,16 @@ const BookingModal = ({ bikes, setBikes }) => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                setBikes(null)
-                toast.success('Booking Confirmed')
+
+                if (data.acknowledged) {
+                    setBikes(null)
+                    toast.success('Booking Confirmed')
+                }
             })
 
 
     }
+
 
     return (
         <>

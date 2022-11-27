@@ -1,11 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
+import Loading from '../../Shared/Loading/Loading';
 import Category3 from './Category3';
 
 const Category = () => {
     // const [categories, setCategories] = useState([]);
 
-    const { data: categories = [] } = useQuery({
+    const { data: categories = [], isLoading } = useQuery({
         queryKey: ['category'],
         queryFn: () => fetch('http://localhost:5001/category')
             .then(res => res.json())
@@ -16,6 +17,9 @@ const Category = () => {
     //         .then(res => res.json())
     //         .then(data => setCategories(data))
     // }, [])
+    if (isLoading) {
+        return <Loading></Loading>
+    }
     return (
         <div>
             <h1> this is  category- {categories.length}</h1>
