@@ -43,7 +43,7 @@ const SignUp = () => {
             })
             .catch(err => console.error(err));
     }
-
+    // error fixed 
     return (
         <div className='h-[600px] flex justify-center items-center '>
             <div className='w-96 p-7'>
