@@ -1,13 +1,21 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
 import Category3 from './Category3';
 
 const Category = () => {
-    const [categories, setCategories] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5001/category')
+    // const [categories, setCategories] = useState([]);
+
+    const { data: categories = [] } = useQuery({
+        queryKey: ['category'],
+        queryFn: () => fetch('http://localhost:5001/category')
             .then(res => res.json())
-            .then(data => setCategories(data))
-    }, [])
+    })
+
+    // useEffect(() => {
+    //     fetch('http://localhost:5001/category')
+    //         .then(res => res.json())
+    //         .then(data => setCategories(data))
+    // }, [])
     return (
         <div>
             <h1> this is  category- {categories.length}</h1>
