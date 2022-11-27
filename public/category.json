@@ -1,0 +1,56 @@
+[
+    {
+        "catid": "01",
+        "catname": "150CC",
+        "image": "https://imgd.aeplcdn.com/310x174/n/cw/ec/49493/fz-s-right-front-three-quarter-2.jpeg?isig=0",
+        "bikes": [
+            {
+                "name": "Pulser UG5 150",
+                "cc": "150",
+                "img": "",
+                "location": "Dhaka",
+                "resaleprice": "130000",
+                "originalprice": "175000",
+                "yearsofuse": "2 years",
+                "posttime": "nov-2022",
+                "sellername": "Ratul Dev"
+            }
+        ]
+    },
+    {
+        "catid": "02",
+        "catname": "125CC",
+        "image": "https://english.cdn.zeenews.com/sites/default/files/2021/09/16/971059-untitled-design-28.png",
+        "bikes": [
+            {
+                "name": "Hero metro plus 125",
+                "cc": "125",
+                "img": "",
+                "location": "Barishal",
+                "resaleprice": "120000",
+                "originalprice": "165000",
+                "yearsofuse": "3 years",
+                "posttime": "oct-2022",
+                "sellername": "Ebrahim Ruwel"
+            }
+        ]
+    },
+    {
+        "catid": "03",
+        "catname": "100CC",
+        "image": "https://www.bikevaly.com/assets/img/Bajaj-Platina-100-ks.webp",
+        "bikes": [
+            {
+                "name": "Runner chita 100",
+                "cc": "100",
+                "img": "",
+                "location": "Sylhet",
+                "resaleprice": "70000",
+                "originalprice": "111000",
+                "yearsofuse": "1 years",
+                "posttime": "nov-2022",
+                "sellername": "Polash Chowdhury"
+            }
+        ]
+    }
+]

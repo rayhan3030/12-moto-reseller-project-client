@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Pulser UG5 150",
+        "category_id": "63831674bd766e886f4b7985",
+        "cc": "150",
+        "img": "",
+        "location": "Dhaka",
+        "resaleprice": "130000",
+        "originalprice": "175000",
+        "yearsofuse": "2 years",
+        "posttime": "nov-2022",
+        "sellername": "Ratul Dev"
+    },
+    {
+        "name": "Hero Hunk 150",
+        "category_id": "63831674bd766e886f4b7985",
+        "cc": "150",
+        "img": "",
+        "location": "Dhaka",
+        "resaleprice": "110000",
+        "originalprice": "165000",
+        "yearsofuse": "2 years",
+        "posttime": "nov-2022",
+        "sellername": "Ratul Dev"
+    },
+    {
+        "name": "Hero metro plus 125",
+        "category_id": "63831674bd766e886f4b7986",
+        "cc": "125",
+        "img": "",
+        "location": "Barishal",
+        "resaleprice": "700000",
+        "originalprice": "125000",
+        "yearsofuse": "3 years",
+        "posttime": "oct-2022",
+        "sellername": "Ebrahim Ruwel"
+    },
+    {
+        "name": "Yamaha Saluto 125",
+        "category_id": "63831674bd766e886f4b7986",
+        "cc": "125",
+        "img": "",
+        "location": "Barishal",
+        "resaleprice": "850000",
+        "originalprice": "145000",
+        "yearsofuse": "3 years",
+        "posttime": "oct-2022",
+        "sellername": "Ebrahim Ruwel"
+    },
+    {
+        "name": "Runner chita 100",
+        "category_id": "63831674bd766e886f4b7987",
+        "cc": "100",
+        "img": "",
+        "location": "Sylhet",
+        "resaleprice": "70000",
+        "originalprice": "111000",
+        "yearsofuse": "1 years",
+        "posttime": "nov-2022",
+        "sellername": "Polash Chowdhury"
+    },
+    {
+        "name": "Runner chita 100",
+        "category_id": "63831674bd766e886f4b7987",
+        "cc": "100",
+        "img": "",
+        "location": "Sylhet",
+        "resaleprice": "70000",
+        "originalprice": "111000",
+        "yearsofuse": "1 years",
+        "posttime": "nov-2022",
+        "sellername": "Polash Chowdhury"
+    }
+]
