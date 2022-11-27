@@ -3,6 +3,7 @@ import AdvertisedItem from '../AdvertisedItem/AdvertisedItem';
 import Banner from '../Banner/Banner';
 import Category from '../Category/Category';
 import ExtraCard from '../ExtraCard/ExtraCard';
+import Leaflet from '../ExtraCard/Leaflet';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <ExtraCard></ExtraCard>
             <Category></Category>
             <AdvertisedItem></AdvertisedItem>
+            <Leaflet></Leaflet>
         </div>
     );
 };
