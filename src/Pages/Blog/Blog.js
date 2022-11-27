@@ -18,7 +18,7 @@ const Blog = () => {
                                 </h3>
                                 {/* <time className="text-xs tracking-wide uppercase dark:text-gray-400">Dec 2020</time> */}
                                 <p className="mt-5">
-
+                                    {/* this is blog */}
                                     <span className='text-xl'>Managing state in your React apps isn’t as simple as using useState or useReducer.</span>
                                     <br />
                                     <small>Not only are there are a lot of different kinds of state, but there often dozens of ways of managing each kind. Which should you choose?   In this guide, we will uncover the several kinds of state in your React apps that you might not be aware of, plus how to manage them in the most effective way.</small>
