@@ -8,7 +8,7 @@ const ExtraCard = () => {
                     <h2 className="text-center text-4xl tracking-tighter font-bold">Safe and
                         <br className="sm:hidden" /> {" "} 100% secure payment
                     </h2>
-                    <p>🏍🏍Thank You for choosing Moto Reseller 🏍🏍</p>
+                    <p>🏍🏍Thank You for choosing Moto Reseller!! 🏍🏍</p>
                     <div className="space-x-2 text-center py-2 lg:py-0">
                         <span>Plus free GPS Tracker! Use Promocode:</span>
                         <span className="font-bold text-lg">MOTOSALETESS</span>
