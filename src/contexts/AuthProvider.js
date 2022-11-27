@@ -10,12 +10,13 @@ const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true)
     const googleProvider = new GoogleAuthProvider();
 
-
+    // create new user using email and password
     const createUser = (email, password) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
+    // sign in with normal email and password. password is conditional.
     const signIn = (email, password) => {
         setLoading(true)
         return signInWithEmailAndPassword(auth, email, password);
@@ -27,12 +28,13 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, googleProvider)
     }
 
+    // this function helps to save user name in signup section. 
     const updateUser = (userInfo) => {
 
         return updateProfile(auth.currentUser, userInfo)
     }
 
-
+    // this is for logout
     const logOut = () => {
         setLoading(true)
         return signOut(auth);
