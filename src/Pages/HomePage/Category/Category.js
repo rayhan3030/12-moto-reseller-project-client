@@ -22,7 +22,7 @@ const Category = () => {
             <div className='grid md:grid-cols-3 lg:grid-cols-3 grid-cols-1'>
                 {
                     categories.map(category => <Category3
-                        key={category.id}
+                        key={category._id}
                         category={category}
                     ></Category3>)
                 }

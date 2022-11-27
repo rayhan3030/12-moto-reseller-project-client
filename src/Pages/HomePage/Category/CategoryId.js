@@ -22,6 +22,7 @@ const CategoryId = () => {
                 bikes &&
                 <BookingModal
                     bikes={bikes}
+                    setBikes={setBikes}
                 ></BookingModal>
             }
         </div>
