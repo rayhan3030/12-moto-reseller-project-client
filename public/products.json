@@ -1,7 +1,7 @@
 [
     {
         "name": "Pulser UG5 150",
-        "category_id": "63831674bd766e886f4b7985",
+        "categoryId": "63831674bd766e886f4b7985",
         "cc": "150",
         "img": "",
         "location": "Dhaka",
@@ -13,7 +13,7 @@
     },
     {
         "name": "Hero Hunk 150",
-        "category_id": "63831674bd766e886f4b7985",
+        "categoryId": "63831674bd766e886f4b7985",
         "cc": "150",
         "img": "",
         "location": "Dhaka",
@@ -25,7 +25,7 @@
     },
     {
         "name": "Hero metro plus 125",
-        "category_id": "63831674bd766e886f4b7986",
+        "categoryId": "63831674bd766e886f4b7986",
         "cc": "125",
         "img": "",
         "location": "Barishal",
@@ -37,7 +37,7 @@
     },
     {
         "name": "Yamaha Saluto 125",
-        "category_id": "63831674bd766e886f4b7986",
+        "categoryId": "63831674bd766e886f4b7986",
         "cc": "125",
         "img": "",
         "location": "Barishal",
@@ -49,7 +49,7 @@
     },
     {
         "name": "Runner chita 100",
-        "category_id": "63831674bd766e886f4b7987",
+        "categoryId": "63831674bd766e886f4b7987",
         "cc": "100",
         "img": "",
         "location": "Sylhet",
@@ -61,7 +61,7 @@
     },
     {
         "name": "Runner chita 100",
-        "category_id": "63831674bd766e886f4b7987",
+        "categoryId": "63831674bd766e886f4b7987",
         "cc": "100",
         "img": "",
         "location": "Sylhet",
