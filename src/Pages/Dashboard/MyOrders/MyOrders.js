@@ -1,38 +1,55 @@
-import React from 'react';
+import { async } from '@firebase/util';
+import { useQuery } from '@tanstack/react-query';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../../contexts/AuthProvider';
 
 const MyOrders = () => {
+    const { user } = useContext(AuthContext)
+
+    const url = `http://localhost:5001/bookings?email=${user?.email}`;
+
+    const { data: bookings = [] } = useQuery({
+        queryKey: ['bookings', user?.email],
+        queryFn: async () => {
+            const res = await fetch(url, {
+                headers: {
+                    authorization: `bearer ${localStorage.getItem('accessToken')}`
+                }
+            });
+            const data = await res.json()
+            return data;
+        }
+    })
+
     return (
         <div>
-            <h2 className=' text-3xl mb-5'>my orders</h2>
+            <h2 className=' text-3xl mb-5'>My Orders</h2>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Product Image</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Payment</th>
+
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th>1</th>
-                            <td>Cy Ganderton</td>
-                            <td>Quality Control Specialist</td>
-                            <td>Blue</td>
-                        </tr>
-                        <tr className="hover">
-                            <th>2</th>
-                            <td>Hart Hagerty</td>
-                            <td>Desktop Support Technician</td>
-                            <td>Purple</td>
-                        </tr>
-                        <tr>
-                            <th>3</th>
-                            <td>Brice Swyre</td>
-                            <td>Tax Accountant</td>
-                            <td>Red</td>
-                        </tr>
+                        {
+                            bookings.map((booking, i) => <tr key={booking._id}>
+                                <th>{i + 1}</th>
+                                <td><div className="avatar">
+                                    <div className="w-16 rounded">
+                                        <img src={booking.img} alt="Tailwind-CSS-Avatar-component" />
+                                    </div>
+                                </div></td>
+                                <td>{booking.name}</td>
+                                <td>TK, {booking.resaleprice}</td>
+                                <td>Blue</td>
+                            </tr>)
+                        }
                     </tbody>
                 </table>
             </div>

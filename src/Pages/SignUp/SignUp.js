@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
+import useToken from '../../hooks/useToken';
 
 const SignUp = () => {
 
@@ -10,7 +11,14 @@ const SignUp = () => {
 
     const { createUser, updateUser, signInWithGoogle } = useContext(AuthContext);
     const [signUpError, setSignUpError] = useState('')
+    const [createdUserEmail, setCreatedUserEmail] = useState('')
+
+    const [token] = useToken(createdUserEmail);
     const navigate = useNavigate()
+
+    if (token) {
+        navigate('/')
+    }
 
     const handleSignUp = (data) => {
 
@@ -25,7 +33,7 @@ const SignUp = () => {
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        navigate('/');
+                        saveUser(data.name, data.email);
                     })
                     .catch(err => console.log(err));
             })
@@ -35,13 +43,33 @@ const SignUp = () => {
             });
     }
 
+    //save user info to db
+    const saveUser = (name, email) => {
+        const user = { name, email };
+        fetch('http://localhost:5001/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                setCreatedUserEmail(email)
+
+            })
+    }
+
+
+
 
     const handleGoogleSignIe = () => {
         signInWithGoogle()
             .then(result => {
                 const user = result.user;
                 console.log(user);
-
+                saveUser(user.displayName, user.email);
+                navigate('/');
 
             })
             .catch(err => console.error(err));
