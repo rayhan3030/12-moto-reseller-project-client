@@ -9,6 +9,13 @@ We are providing you Reviews from a country famous intenet company
 
 Live Site Link: https://moto-reseller.web.app/
 
+-----------------------------------------------------------------------
+adminEmail: one@gmail.com
+adminPassword: Rayhan@2022
+
+---------------------------------------------
+
+* also have seller and buyer email login info if needed
 admin info:  email:  one@gmail.com              password: Rayhan@2022
 seller info:  email:  two@gmail.com             password: Rayhan@2022
 buyer info:  email:  moto@gmail.com              password: Rayhan@2022
