@@ -29,11 +29,12 @@ const SignUp = () => {
                 console.log(user)
                 toast.success('user created successfully')
                 const userInfo = {
-                    displayName: data.name
+                    displayName: data.name,
+                    role: data.role
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        saveUser(data.name, data.email);
+                        saveUser(data.name, data.email, data.role);
                     })
                     .catch(err => console.log(err));
             })
@@ -44,9 +45,9 @@ const SignUp = () => {
     }
 
     //save user info to db
-    const saveUser = (name, email) => {
-        const user = { name, email };
-        fetch('http://localhost:5001/users', {
+    const saveUser = (name, email, role) => {
+        const user = { name, email, role };
+        fetch('https://moto-resale-server.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -103,6 +104,16 @@ const SignUp = () => {
                             pattern: { value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/, message: "Password must be strong" }
                         })} className="input input-bordered w-full max-w-xs" />
                         {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
+                    </div>
+                    <div className="form-control w-full max-w-xs">
+                        <label className="label"> <span className="label-text">Select Role</span></label>
+                        <select defaultValue
+                            {...register('role')}
+                            className="select select-bordered w-full max-w-xs">
+                            <option>buyer</option>
+                            <option>seller</option>
+                        </select>
+                        {errors.role && <p className='text-red-500'>{errors.role?.message}</p>}
                     </div>
                     <input className='btn bg-gradient-to-r from-yellow-400 to-yellow-100 text-black w-full mt-5' value='SignUp' type="submit" />
                     {signUpError && <p className='text-red-600'>{signUpError}</p>}

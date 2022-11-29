@@ -1,14 +1,15 @@
-import { async } from '@firebase/util';
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import Loading from '../../Shared/Loading/Loading';
 
 const MyOrders = () => {
     const { user } = useContext(AuthContext)
 
-    const url = `http://localhost:5001/bookings?email=${user?.email}`;
+    const url = `https://moto-resale-server.vercel.app/bookings?email=${user?.email}`;
 
-    const { data: bookings = [] } = useQuery({
+    const { data: bookings = [], isLoading } = useQuery({
         queryKey: ['bookings', user?.email],
         queryFn: async () => {
             const res = await fetch(url, {
@@ -21,6 +22,10 @@ const MyOrders = () => {
         }
     })
 
+    if (isLoading) {
+        return <Loading></Loading>
+    }
+
     return (
         <div>
             <h2 className=' text-3xl mb-5'>My Orders</h2>
@@ -29,7 +34,7 @@ const MyOrders = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Product Image</th>
+                            <th>Order Image</th>
                             <th>Product Name</th>
                             <th>Price</th>
                             <th>Payment</th>
@@ -38,7 +43,8 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            bookings.map((booking, i) => <tr key={booking._id}>
+                            bookings &&
+                            bookings?.map((booking, i) => <tr key={booking._id}>
                                 <th>{i + 1}</th>
                                 <td><div className="avatar">
                                     <div className="w-16 rounded">
@@ -47,7 +53,20 @@ const MyOrders = () => {
                                 </div></td>
                                 <td>{booking.name}</td>
                                 <td>TK, {booking.resaleprice}</td>
-                                <td>Blue</td>
+                                <td>
+                                    {
+                                        booking.resaleprice && !booking.paid && <Link
+                                            to={`/dashboard/payment/${booking._id}`}
+                                        >
+                                            <button
+                                                className='btn btn-warning btn-sm hover:bg-yellow-200'
+                                            >PAY</button>
+                                        </Link>
+                                    }
+                                    {
+                                        booking.resaleprice && booking.paid && <span className='text-primary'>PAID</span>
+                                    }
+                                </td>
                             </tr>)
                         }
                     </tbody>

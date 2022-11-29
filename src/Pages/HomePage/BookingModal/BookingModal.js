@@ -32,7 +32,7 @@ const BookingModal = ({ bikes, setBikes }) => {
         }
 
 
-        fetch('http://localhost:5001/bookings', {
+        fetch('https://moto-resale-server.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

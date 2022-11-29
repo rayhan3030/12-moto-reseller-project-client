@@ -9,7 +9,8 @@ const CategoryId = () => {
     return (
         <div className='mt-10'>
 
-            <div className='grid md:grid-cols-2 grid-cols-1 gap-5 lg:grid-cols-3 h-screen place-items-center'>
+            <div className='grid md:grid-cols-2 grid-cols-1 gap-5 lg:grid-cols-3  '>
+
                 {
                     products?.map(product => <CategoryIdCard
                         key={product?._id}
@@ -17,6 +18,7 @@ const CategoryId = () => {
                         setBikes={setBikes}
                     ></CategoryIdCard>)
                 }
+
             </div>
             {
                 bikes &&

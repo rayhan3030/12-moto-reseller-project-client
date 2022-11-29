@@ -1,3 +1,50 @@
+
+⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛⌛
+
+-----------------------🆆🅴🅻🅲🅾🅼🅴----------------------- TO
+
+                    MOTO RESELLER 
+Moto Reseller
+We are providing you Reviews from a country famous intenet company
+
+Live Site Link: https://moto-reseller.web.app/
+
+admin info:  email:  one@gmail.com              password: Rayhan@2022
+seller info:  email:  two@gmail.com             password: Rayhan@2022
+buyer info:  email:  moto@gmail.com              password: Rayhan@2022
+
+Welcome to Moto Reseller
+
+------------ꜱɪᴛᴇ ꜰᴇᴀᴛᴜʀᴇꜱ-------------
+
+• This Single Page Application is Built on React App and Tailwind CSS, DaisyUI, Mamba UI, used for designing the website
+• Main dependences are React-router-dom, Firebase, React-to-pdf, Context-Api, React Toastify, Tanstek React Query
+• You can login via email, password and also with google  account.
+• You Can choose which kind of account you want to  create like seller or buyer via select drop down menu in sign up page
+• There is a vast Blog section with some important QNA about Programming Topics.
+• Thre Second hand bike categories has been added according to bike sagments. (150cc, 125cc, 100cc).
+•  customized GIF Banner used in Home Route
+• You can add product with relevent information with photo upload system
+• Admin can select any user to make admin, seller or buyer
+• Buyers can book items by clicking book now button and fillup booking form
+• Sellers can add there own product and also can delete products
+
+
+
+This Single Page Application is Built on React App and Tailwind CSS, DaisiUI (Dev dependency) Mamba UI, used for designing the website
+Main dependences are React-router-dom, Firebase, React Full Screen Image Context-Api, React Hot Toast React PhotoView
+You can login via email, password and also with google your account.
+There is a vast BLOG section with some important educational QNA about some programming topic.
+3 Product Category added to the home page. A Gif animated banner and animated leaflet has been also added.
+A Stylish Footer You can found on bottom.
+You can Register with email, password
+You can also Register with Google Account
+In category:id Route you can Book items showing in the cards
+You can also add your own customize products as a Seller
+By Clicking see View Details in service or package card You can see in details about that service and also you can see others Product in that 
+
+✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
